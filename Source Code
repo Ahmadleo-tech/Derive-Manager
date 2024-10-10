@@ -1,0 +1,118 @@
+import webbrowser
+import re
+import pyttsx3
+
+engine = pyttsx3.init()
+
+class Subject:
+    def __init__(self, name, link):
+        self.name = name
+        self.link = link
+
+class Semester:
+    def __init__(self, number):
+        self.number = number
+        self.subjects = []
+
+    def add_subject(self, subject):
+        self.subjects.append(subject)
+
+    def get_subject_links(self):
+        return [(subject.name, subject.link) for subject in self.subjects]
+
+class Degree:
+    def __init__(self, name):
+        self.name = name
+        self.semesters = [Semester(i) for i in range(1, 9)]
+
+class LinkManager:
+    def __init__(self):
+        self.degrees = {
+            "CS": Degree("Computer Science"),
+        }
+        self.add_default_links()
+
+    def add_default_links(self):
+        # Default links for BSCS (removed actual links for upload purposes)
+        self.degrees["CS"].semesters[0].add_subject(Subject("PF", "Link for PF"))
+        self.degrees["CS"].semesters[0].add_subject(Subject("ICT", "Link for ICT"))
+
+        self.degrees["CS"].semesters[1].add_subject(Subject("OOP", "Link for OOP"))
+
+        self.degrees["CS"].semesters[2].add_subject(Subject("DSA", "Link for DSA"))
+        self.degrees["CS"].semesters[2].add_subject(Subject("DM", "Link for DM"))
+        self.degrees["CS"].semesters[2].add_subject(Subject("COAL", "Link for COAL"))
+
+        self.degrees["CS"].semesters[3].add_subject(Subject("OS", "Link for OS"))
+        self.degrees["CS"].semesters[3].add_subject(Subject("DB", "Link for DB"))
+
+        self.degrees["CS"].semesters[4].add_subject(Subject("SE", "Link for SE"))
+        self.degrees["CS"].semesters[4].add_subject(Subject("WD", "Link for WD"))
+
+        self.degrees["CS"].semesters[5].add_subject(Subject("CN", "Link for CN"))
+        self.degrees["CS"].semesters[5].add_subject(Subject("MAD", "Link for MAD"))
+
+        self.degrees["CS"].semesters[6].add_subject(Subject("ST", "Link for ST"))
+        self.degrees["CS"].semesters[6].add_subject(Subject("AI", "Link for AI"))
+
+        self.degrees["CS"].semesters[7].add_subject(Subject("CP", "Link for CP"))
+        self.degrees["CS"].semesters[7].add_subject(Subject("EC", "Link for EC"))
+
+    def menu(self):
+        while True:
+            print("\n=== CS Link Manager ===")
+            print("1. Select Semester")
+            print("2. Exit")
+            choice = input("Choose an option: ")
+            engine.say("Choose an option: ")
+            engine.runAndWait()
+            if choice == '1':
+                self.select_semester("CS")
+            elif choice == '2':
+                break
+            else:
+                print("Invalid choice. Please try again.")
+                engine.say("Invalid choice. Please try again.")
+                engine.runAndWait()
+
+    def select_semester(self, degree):
+        semester = self.degrees[degree]
+        print(f"\nAvailable Semesters for {semester.name}:")
+        engine.say(f"Available Semesters for {semester.name}:")
+        engine.runAndWait()
+        for sem in semester.semesters:
+            print(f"Semester {sem.number}")
+            engine.say(f"Semester {sem.number}")
+            engine.runAndWait()
+
+        semester_number = int(input("Select a semester number: ")) - 1
+        engine.say("Select a semester number: ")
+        engine.runAndWait()
+        if 0 <= semester_number < len(semester.semesters):
+            self.search_subject(semester.semesters[semester_number])
+        else:
+            print("Invalid semester number. Please try again.")
+            engine.say("Invalid semester number. Please try again.")
+            engine.runAndWait()
+
+    def search_subject(self, semester):
+        subject_name = input("Enter the subject name to search for: ")
+        engine.say("Enter the subject name to search for: ")
+        engine.runAndWait()
+        found = False
+        for subject in semester.subjects:
+            if re.search(subject_name, subject.name, re.IGNORECASE):
+                print(f"Opening link for {subject.name}: {subject.link}")
+                engine.say(f"Opening link for Subject : {subject.name}")
+                engine.runAndWait()
+                webbrowser.open(subject.link)
+                found = True
+                break
+        if not found:
+            print("Subject not found in this semester.")
+            engine.say("Subject not found in this semester.")
+            engine.runAndWait()
+
+if __name__ == "__main__":
+    manager = LinkManager()
+    manager.menu()
