@@ -1,0 +1,196 @@
+#include<iostream>
+#include<windows.h>
+using namespace std;
+
+////////////////// Semester 1 //////////////////////////
+void sem1(string subject) {
+    if (subject == "PF") {
+        const char* pf1 = "Link of PF";
+        ShellExecute(0, 0, pf1, 0, 0, SW_SHOW);
+        cout<<"SucessFuly Opened "<<subject<<" Google Derive "<<endl;
+    } else if (subject == "ICT") {
+        const char* ict1 = "Link of ICT";
+        ShellExecute(0, 0, ict1, 0, 0, SW_SHOW);
+         cout<<"SucessFuly Opened "<<subject<<" Google Derive "<<endl;
+    } else {
+        cout << "\nError: This Computing Subject is Not in 1st Semester!\n\n";
+    }
+}
+
+///////////////// Semester 2 //////////////////////////
+void sem2(string subject) {
+    if (subject == "OOP") {
+        const char* oop1 = "Link of OOP";
+        ShellExecute(0, 0, oop1, 0, 0, SW_SHOW);
+         cout<<"SucessFuly Opened "<<subject<<" Google Derive "<<endl;
+    } else {
+        cout << "\nError: This Computing Subject is Not in 2nd Semester!\n\n";
+    }
+}
+
+///////////////// Semester 3 //////////////////////////
+void sem3(string subject) {
+    if (subject == "DSA") {
+        const char* dsa1 = "Link of DSA";
+        ShellExecute(0, 0, dsa1, 0, 0, SW_SHOW);
+        cout<<"SucessFuly Opened "<<subject<<" Google Derive "<<endl;
+    } else if (subject == "DS") {
+        const char* ds1 = "Link of DS";
+        ShellExecute(0, 0, ds1, 0, 0, SW_SHOW);
+        cout<<"SucessFuly Opened "<<subject<<" Google Derive "<<endl;
+    } else if (subject == "COAL") {
+        const char* coal1 = "Link of COAL";
+        ShellExecute(0, 0, coal1, 0, 0, SW_SHOW);
+        cout<<"SucessFuly Opened "<<subject<<" Google Derive "<<endl;
+    } else {
+        cout << "\nError: This Computing Subject is Not in 3rd Semester!\n\n";
+    }
+}
+
+///////////////// Semester 4 //////////////////////////
+void sem4(string subject) {
+    if (subject == "DB") {
+        const char* db1 = "Link of DB";
+        ShellExecute(0, 0, db1, 0, 0, SW_SHOW);
+        cout<<"SucessFuly Opened "<<subject<<" Google Derive "<<endl;
+    } else if (subject == "OS") {
+        const char* os1 = "Link of OS";
+        ShellExecute(0, 0, os1, 0, 0, SW_SHOW);
+        cout<<"SucessFuly Opened "<<subject<<" Google Derive "<<endl;
+    } else {
+        cout << "\nError: This Computing Subject is Not in 4th Semester!\n\n";
+    }
+}
+
+///////////////// Semester 5 //////////////////////////
+void sem5(string subject) {
+    if (subject == "SE") {
+        const char* se1 = "Link of SE";
+        ShellExecute(0, 0, se1, 0, 0, SW_SHOW);
+        cout<<"SucessFuly Opened "<<subject<<" Google Derive "<<endl;
+    } else if (subject == "WD") {
+        const char* wd1 = "Link of WebDev";
+        ShellExecute(0, 0, wd1, 0, 0, SW_SHOW);
+        cout<<"SucessFuly Opened "<<subject<<" Google Derive "<<endl;
+    } else {
+        cout << "\nError: This Computing Subject is Not in 5th Semester!\n\n";
+    }
+}
+
+///////////////// Semester 6 //////////////////////////
+void sem6(string subject) {
+    if (subject == "CN") {
+        const char* cn1 = "Link of CN";
+        ShellExecute(0, 0, cn1, 0, 0, SW_SHOW);
+        cout<<"SucessFuly Opened "<<subject<<" Google Derive "<<endl;
+    } else if (subject == "MAD") {
+        const char* mad1 = "Link of MobileDev";
+        ShellExecute(0, 0, mad1, 0, 0, SW_SHOW);
+        cout<<"SucessFuly Opened "<<subject<<" Google Derive "<<endl;
+    } else {
+        cout << "\nError: This Computing Subject is Not in 6th Semester!\n\n";
+    }
+}
+
+///////////////// Semester 7 //////////////////////////
+void sem7(string subject) {
+    if (subject == "ST") {
+        const char* st1 = "Link of Software Testing";
+        ShellExecute(0, 0, st1, 0, 0, SW_SHOW);
+        cout<<"SucessFuly Opened "<<subject<<" Google Derive "<<endl;
+    } else if (subject == "AI") {
+        const char* ai1 = "Link of AI";
+        ShellExecute(0, 0, ai1, 0, 0, SW_SHOW);
+        cout<<"SucessFuly Opened "<<subject<<" Google Derive "<<endl;
+    } else {
+        cout << "\nError: This Computing Subject is Not in 7th Semester!\n\n";
+    }
+}
+
+///////////////// Semester 8 //////////////////////////
+void sem8(string subject) {
+    if (subject == "CP") {
+        const char* cp1 = "Link of Capstone";
+        ShellExecute(0, 0, cp1, 0, 0, SW_SHOW);
+        cout<<"SucessFuly Opened "<<subject<<" Google Derive "<<endl;
+    } else if (subject == "EC") {
+        const char* ec1 = "Link of Computing Ethics";
+        ShellExecute(0, 0, ec1, 0, 0, SW_SHOW);
+        cout<<"SucessFuly Opened "<<subject<<" Google Derive "<<endl;
+    } else {
+        cout << "\nError: This Computing Subject is Not in 8th Semester!\n\n";
+    }
+}
+
+int main() {
+    int choice;
+    string subject = "";
+
+    do {
+        cout << "\nMenu: \n"
+             << "1. Semester 1 (PF, ICT)\n"
+             << "2. Semester 2 (OOP)\n"
+             << "3. Semester 3 (DSA, DS, COAL)\n"
+             << "4. Semester 4 (OS, DB)\n"
+             << "5. Semester 5 (SE, WD)\n"
+             << "6. Semester 6 (CN, MAD)\n"
+             << "7. Semester 7 (ST, AI)\n"
+             << "8. Semester 8 (CP, EC)\n"
+             << "9. Exit\n"
+             << "Enter Choice (1 - 9): ";
+        cin >> choice;
+
+        switch (choice) {
+            case 1:
+                cout << "Enter Subject Name for Semester 1: ";
+                cin >> subject;
+                sem1(subject);
+                break;
+            case 2:
+                cout << "Enter Subject Name for Semester 2: ";
+                cin >> subject;
+                sem2(subject);
+                
+                break;
+            case 3:
+                cout << "Enter Subject Name for Semester 3: ";
+                cin >> subject;
+                sem3(subject);
+                break;
+            case 4:
+                cout << "Enter Subject Name for Semester 4: ";
+                cin >> subject;
+                sem4(subject);
+                break;
+            case 5:
+                cout << "Enter Subject Name for Semester 5: ";
+                cin >> subject;
+                sem5(subject);
+                break;
+            case 6:
+                cout << "Enter Subject Name for Semester 6: ";
+                cin >> subject;
+                sem6(subject);
+                break;
+            case 7:
+                cout << "Enter Subject Name for Semester 7: ";
+                cin >> subject;
+                sem7(subject);
+                break;
+            case 8:
+                cout << "Enter Subject Name for Semester 8: ";
+                cin >> subject;
+                sem8(subject);
+                break;
+            case 9:
+                cout << "Exiting...\n";
+                break;
+            default:
+                cout << "Invalid choice! Please enter a number between 1 and 9.\n";
+        }
+
+    } while (choice != 9);
+
+    system("pause");
+    return 0;
+}
