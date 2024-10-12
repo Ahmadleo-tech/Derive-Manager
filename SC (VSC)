@@ -1,0 +1,196 @@
+#include<iostream>
+#include<windows.h>
+using namespace std;
+
+////////////////// Semester 1 //////////////////////////
+void sem1(string subject) {
+    if (subject == "PF") {
+        const wchar_t* pf1 = L"https://drive.google.com/drive/folders/1WFbB33MDYV9ooz92zr1_bffhEb8Pye1_";
+        ShellExecuteW(0, 0, pf1, 0, 0, SW_SHOW);
+        cout << "Successfully Opened " << subject << " Google Drive " << endl;
+    }
+    else if (subject == "ICT") {
+        const wchar_t* ict1 = L"https://drive.google.com/drive/folders/1yPk8VZbbB731S27JjBArGthtsJ89CiRS";
+        ShellExecuteW(0, 0, ict1, 0, 0, SW_SHOW);
+        cout << "Successfully Opened " << subject << " Google Drive " << endl;
+    }
+    else {
+        cout << "\nError: This Computing Subject is Not in 1st Semester!\n\n";
+    }
+}
+
+///////////////// Semester 2 //////////////////////////
+void sem2(string subject) {
+    if (subject == "OOP") {
+        const wchar_t* oop1 = L"https://drive.google.com/drive/folders/1hgH7wC7H6if9s-95wpKbHiTfVpWOfdBw";
+        ShellExecuteW(0, 0, oop1, 0, 0, SW_SHOW);
+        cout << "Successfully Opened " << subject << " Google Drive " << endl;
+    }
+    else {
+        cout << "\nError: This Computing Subject is Not in 2nd Semester!\n\n";
+    }
+}
+
+///////////////// Semester 3 //////////////////////////
+void sem3(string subject) {
+    if (subject == "DSA") {
+        const wchar_t* dsa1 = L"https://drive.google.com/drive/folders/1deuPO-sxgbUugS4eAxzm3JTabK_95Qzj";
+        ShellExecuteW(0, 0, dsa1, 0, 0, SW_SHOW);
+        cout << "Successfully Opened " << subject << " Google Drive " << endl;
+    }
+    else if (subject == "DS") {
+        const wchar_t* ds1 = L"https://drive.google.com/drive/folders/1XPMNyqYL6QFVDlDgTiepx9HkiqcNtTRx";
+        ShellExecuteW(0, 0, ds1, 0, 0, SW_SHOW);
+        cout << "Successfully Opened " << subject << " Google Drive " << endl;
+    }
+    else if (subject == "COAL") {
+        const wchar_t* coal1 = L"https://drive.google.com/drive/folders/1ctNd4IFdayaaM1yQgV90z9lqgAJKjr3s";
+        ShellExecuteW(0, 0, coal1, 0, 0, SW_SHOW);
+        cout << "Successfully Opened " << subject << " Google Drive " << endl;
+    }
+    else {
+        cout << "\nError: This Computing Subject is Not in 3rd Semester!\n\n";
+    }
+}
+
+///////////////// Semester 4 //////////////////////////
+void sem4(string subject) {
+    if (subject == "DB") {
+        const wchar_t* db1 = L"https://drive.google.com/drive/folders/13zs9uv5t0L33gaxPRPEx4aDqhJpkWPFn";
+        ShellExecuteW(0, 0, db1, 0, 0, SW_SHOW);
+        cout << "Successfully Opened " << subject << " Google Drive " << endl;
+    }
+    else if (subject == "OS") {
+        const wchar_t* os1 = L"https://drive.google.com/drive/folders/1XU_aEyVGhvWx5VFB8erMym_BICPbiy31";
+        ShellExecuteW(0, 0, os1, 0, 0, SW_SHOW);
+        cout << "Successfully Opened " << subject << " Google Drive " << endl;
+    }
+    else {
+        cout << "\nError: This Computing Subject is Not in 4th Semester!\n\n";
+    }
+}
+
+///////////////// Semester 5 //////////////////////////
+void sem5(string subject) {
+    if (subject == "SE") {
+        const wchar_t* se1 = L"https://example.com/CS_S5_SE";
+        ShellExecuteW(0, 0, se1, 0, 0, SW_SHOW);
+        cout << "Successfully Opened " << subject << " Google Drive " << endl;
+    }
+    else if (subject == "WD") {
+        const wchar_t* wd1 = L"https://example.com/CS_S5_WebDev";
+        ShellExecuteW(0, 0, wd1, 0, 0, SW_SHOW);
+        cout << "Successfully Opened " << subject << " Google Drive " << endl;
+    }
+    else {
+        cout << "\nError: This Computing Subject is Not in 5th Semester!\n\n";
+    }
+}
+
+///////////////// Semester 6 //////////////////////////
+void sem6(string subject) {
+    if (subject == "CN") {
+        const wchar_t* cn1 = L"https://drive.google.com/drive/folders/1e54meyd0d16L0nVzX6c6B00Up0xs_ic3";
+        ShellExecuteW(0, 0, cn1, 0, 0, SW_SHOW);
+        cout << "Successfully Opened " << subject << " Google Drive " << endl;
+    }
+    else if (subject == "MAD") {
+        const wchar_t* mad1 = L"https://example.com/CS_S6_MobileDev";
+        ShellExecuteW(0, 0, mad1, 0, 0, SW_SHOW);
+        cout << "Successfully Opened " << subject << " Google Drive " << endl;
+    }
+    else {
+        cout << "\nError: This Computing Subject is Not in 6th Semester!\n\n";
+    }
+}
+
+///////////////// Semester 7 //////////////////////////
+void sem7(string subject) {
+    if (subject == "ST") {
+        const wchar_t* st1 = L"https://example.com/CS_S7_Testing";
+        ShellExecuteW(0, 0, st1, 0, 0, SW_SHOW);
+        cout << "Successfully Opened " << subject << " Google Drive " << endl;
+    }
+    else if (subject == "AI") {
+        const wchar_t* ai1 = L"https://drive.google.com/drive/folders/1SIw0myn5dKD8J5PdkpCB2TZwoeJnC0lC";
+        ShellExecuteW(0, 0, ai1, 0, 0, SW_SHOW);
+        cout << "Successfully Opened " << subject << " Google Drive " << endl;
+    }
+    else {
+        cout << "\nError: This Computing Subject is Not in 7th Semester!\n\n";
+    }
+}
+
+///////////////// Semester 8 //////////////////////////
+void sem8(string subject) {
+    if (subject == "CP") {
+        const wchar_t* cp1 = L"https://example.com/CS_S8_Capstone";
+        ShellExecuteW(0, 0, cp1, 0, 0, SW_SHOW);
+        cout << "Successfully Opened " << subject << " Google Drive " << endl;
+    }
+    else if (subject == "EC") {
+        const wchar_t* ec1 = L"https://example.com/CS_S8_Ethics";
+        ShellExecuteW(0, 0, ec1, 0, 0, SW_SHOW);
+        cout << "Successfully Opened " << subject << " Google Drive " << endl;
+    }
+    else {
+        cout << "\nError: This Computing Subject is Not in 8th Semester!\n\n";
+    }
+}
+
+int main() {
+    int choice;
+    string subject = "";
+
+    do {
+        cout << "\nMenu: \n"
+            << "1. Semester 1 (PF, ICT)\n"
+            << "2. Semester 2 (OOP)\n"
+            << "3. Semester 3 (DSA, DS, COAL)\n"
+            << "4. Semester 4 (OS, DB)\n"
+            << "5. Semester 5 (SE, WD)\n"
+            << "6. Semester 6 (CN, MAD)\n"
+            << "7. Semester 7 (ST, AI)\n"
+            << "8. Semester 8 (CP, EC)\n"
+            << "9. Exit\n"
+            << "Enter Choice (1 - 9): ";
+        cin >> choice;
+        cout << "Enter Subject: ";
+        cin >> subject;
+
+        switch (choice) {
+        case 1:
+            sem1(subject);
+            break;
+        case 2:
+            sem2(subject);
+            break;
+        case 3:
+            sem3(subject);
+            break;
+        case 4:
+            sem4(subject);
+            break;
+        case 5:
+            sem5(subject);
+            break;
+        case 6:
+            sem6(subject);
+            break;
+        case 7:
+            sem7(subject);
+            break;
+        case 8:
+            sem8(subject);
+            break;
+        case 9:
+            cout << "Exiting...\n";
+            break;
+        default:
+            cout << "\nInvalid Input! Please Enter a Valid Choice!\n\n";
+        }
+    } while (choice != 9);
+
+    system("Pause");
+    return 0;
+}
